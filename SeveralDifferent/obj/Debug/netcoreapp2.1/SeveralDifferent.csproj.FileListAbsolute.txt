@@ -1,0 +1,11 @@
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\bin\Debug\netcoreapp2.1\SeveralDifferent.deps.json
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\bin\Debug\netcoreapp2.1\SeveralDifferent.runtimeconfig.json
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\bin\Debug\netcoreapp2.1\SeveralDifferent.runtimeconfig.dev.json
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\bin\Debug\netcoreapp2.1\SeveralDifferent.dll
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\bin\Debug\netcoreapp2.1\SeveralDifferent.pdb
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.csprojAssemblyReference.cache
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.csproj.CoreCompileInputs.cache
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.AssemblyInfoInputs.cache
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.AssemblyInfo.cs
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.dll
+C:\Users\Work\Desktop\Amende\C# Training\SeveralDifferent\obj\Debug\netcoreapp2.1\SeveralDifferent.pdb
