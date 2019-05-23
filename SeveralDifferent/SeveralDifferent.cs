@@ -142,12 +142,28 @@ namespace SeveralDifferent{
         }
     }
 
-    
+    class GuidGenerator{
+        
+        public Guid[] GuidBuilder(String[] ean){
+            Guid[] g = new Guid[ean.Length];
+            //g = Guid.NewGuid();
+            //Console.WriteLine(g);
+            //Console.WriteLine(Guid.NewGuid());
+            for(int i = 0; i < ean.Length; i += 1){
+                g[i] = Guid.NewGuid();
+            }
+
+
+            return g;
+        }
+    }
+
+
     class Program{
 
         static void Main(string[] args){
 
-//            AllTheMethods atm = new AllTheMethods();
+            AllTheMethods atm = new AllTheMethods();
 //
 //            Console.WriteLine("[in Main()] Size of Int: " + atm.sizeOfInt());
 //            Console.ReadLine();
@@ -179,8 +195,14 @@ namespace SeveralDifferent{
 //            atm.wannaHearPling();
 //            atm.circleArea();
 
-            var ari = new Arithmetics();
-            ari.controller();
+//            var ari = new Arithmetics();
+//            ari.controller();
+            var g          = new GuidGenerator();
+            string[] eans  = {"400638133391", "400638133392", "400638133393"};
+            var guidray    = g.GuidBuilder(eans);
+            foreach(Guid x in guidray){
+                Console.WriteLine(x);
+            }
 
 
         }
