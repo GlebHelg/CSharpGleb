@@ -24,9 +24,9 @@ namespace SeveralDifferent{
         }
     }
     // Not possible in this language...
-    //int function(){
-    //    Console.ReadLine();
-    //}
+    // public int function(){
+    //     Console.ReadLine();
+    // }
 
     class AllTheMethods{
         public int sizeOfChar(){
@@ -64,7 +64,7 @@ namespace SeveralDifferent{
             Console.ReadLine();
 
             // Impossible to call a function outside of a Class
-            // function();
+            function();
 
             String strToSend = "String theory!";
             Console.WriteLine("[in Main()] Size of String: \"{0}\" : " + atm.sizeOfString(strToSend), strToSend);
