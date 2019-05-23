@@ -29,20 +29,36 @@ namespace SeveralDifferent{
     // }
 
     class AllTheMethods{
-        public int sizeOfChar(){
+        public string sizeOfChar(){
             int a = sizeof(char);
-            return a;
+            return a + "\n";
         }
         public int sizeOfInt(){
             int a = sizeof(int);
             return a;
         }
 
-        public int sizeOfString(String str){
+        public int sizeOfString(string str){
             int strLen   = str.Length;
             int charsize = sizeof(char);
 
             return strLen * charsize;
+        }
+
+        public int doubleToInt(double d){
+            int i;
+            i = (int)d;
+
+            return i;
+        }
+
+        public void readIntFromUserMultiplyByTwo(){
+            Console.WriteLine("Enter an int, and we will multiply it by 2: ");
+            String userInput = Console.ReadLine();
+            int input = Convert.ToInt32(userInput);
+            Console.WriteLine("User entered {0}, multiply this by 2 and you get: " + input * 2 + "\n", input);
+            Console.ReadKey();
+            return;
         }
     }
     class Program{
@@ -64,11 +80,21 @@ namespace SeveralDifferent{
             Console.ReadLine();
 
             // Impossible to call a function outside of a Class
-            function();
+            //function();
 
+            // Difference between a lowercase or uppercase first literal in type specification, when doing variable declaration, is that lowercase are primitive types, while uppercase is object declaration.
             String strToSend = "String theory!";
             Console.WriteLine("[in Main()] Size of String: \"{0}\" : " + atm.sizeOfString(strToSend), strToSend);
             Console.ReadLine();
+
+            double doubleToSend = 42.424242;
+            Console.WriteLine("[in Main()] Now we will convert following double to an int: {0} : " + atm.doubleToInt(doubleToSend)  + "\n", doubleToSend);
+            Console.WriteLine("[in Main()] Now let's check the lengthof this double, when it becomes a string: " + atm.sizeOfString(doubleToSend.ToString()));
+            Console.ReadLine();
+
+            // User Input
+            atm.readIntFromUserMultiplyByTwo();
+
 
         }
     }
