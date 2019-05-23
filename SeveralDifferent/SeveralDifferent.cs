@@ -56,8 +56,22 @@ namespace SeveralDifferent{
             Console.WriteLine("Enter an int, and we will multiply it by 2: ");
             String userInput = Console.ReadLine();
             int input = Convert.ToInt32(userInput);
-            Console.WriteLine("User entered {0}, multiply this by 2 and you get: " + input * 2 + "\n", input);
+            Console.WriteLine("User entered {0}, multiply this by 2 and you get: " + input * 2 + "\n\a", input);
             Console.ReadKey();
+            return;
+        }
+
+        public void wannaHearPling(){
+            //const string answer = "y"; will make build fail, because referenced further down as a variable, but a onstant is not a variable
+            string answer = "y";
+            do{
+                Console.WriteLine("Wanna hear a pling? [y/ * != y]: ");
+                answer = Console.ReadLine();
+                if(answer == "y"){
+                    Console.WriteLine("\a");
+                }
+            }while(answer == "y");
+
             return;
         }
     }
@@ -94,6 +108,7 @@ namespace SeveralDifferent{
 
             // User Input
             atm.readIntFromUserMultiplyByTwo();
+            atm.wannaHearPling();
 
 
         }
