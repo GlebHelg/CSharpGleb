@@ -85,10 +85,64 @@ namespace SeveralDifferent{
         }
     }
     class Arithmetics{
-        static add(int[] ints){
-            
+        static int add(int int1, int int2){
+            return int1 + int2;
+        }
+
+        public void controller(){
+
+            bool toContinue = true;
+            do{
+                Console.WriteLine("You are inside controller function in Arithmetics class.\nWanna do some math? ;)\n[y/n]");
+                string answer = Console.ReadLine();
+                if(answer == "y"){
+                    Console.WriteLine("Sweet! Welcome aboard!! [press any key to continue]");
+                    Console.ReadKey();
+                    string quitter2;
+                    do{
+                        Console.WriteLine("Do you want to add, subtract, multiply or divide? [the choise is yours a/s/m/d or anything else, and you might exit]");
+                        quitter2 = "";
+                        string inp = Console.ReadLine();
+                        char operation = inp[0];
+                        switch(operation){
+                            case 'a' :
+                                Console.WriteLine("For now you can only add 2 ints.\nInt1: ");
+                                int int1  = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine("Int2: ");
+                                int int2  = Convert.ToInt32(Console.ReadLine());
+                                int added = add(int2, int1);//haha, trolling
+                                Console.WriteLine("Seems like the addition went well! The answer is 42, jk, it's: {0}", added);
+                                break;
+                            case 's' :
+                                Console.WriteLine("Not implemented yet...");
+                                break;
+                            case 'm' :
+                                Console.WriteLine("Not implemented yet...");
+                                break;
+                            case 'd' :
+                                Console.WriteLine("Not implemented yet...");
+                                break;
+                            default  :
+                                Console.WriteLine("Do you even type bro?...Thats not the question.\nThe question is, are you a quitter?[y]");
+                                quitter2 = Console.ReadLine();
+                                break;
+                        }
+                    }while(quitter2 != "y");
+                }else if (answer == "n"){
+                    Console.WriteLine("So you don't like math and want to quit? :(\n[i only accept \"y\" as an answer]\n");
+                    string quitter = Console.ReadLine();
+                    if(quitter == "y"){
+                        return;
+                    }
+                }else{
+                    Console.WriteLine("I do not understand... I'm just a stupid program...");
+                }
+            }while(toContinue == true);
+            return;
         }
     }
+
+    
     class Program{
 
         static void Main(string[] args){
@@ -125,8 +179,8 @@ namespace SeveralDifferent{
 //            atm.wannaHearPling();
 //            atm.circleArea();
 
-            Arithmetics ari = new Arithmetics();
-
+            var ari = new Arithmetics();
+            ari.controller();
 
 
         }
