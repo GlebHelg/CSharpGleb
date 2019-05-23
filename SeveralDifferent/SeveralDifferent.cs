@@ -74,41 +74,59 @@ namespace SeveralDifferent{
 
             return;
         }
+
+        public void circleArea(){
+            const double pi = 3.14159;
+            Console.WriteLine("Enter Radius: ");
+            double rad = Convert.ToDouble(Console.ReadLine());
+            double areaCircle = pi * rad * rad;
+            Console.WriteLine("Radius: {0}, Area: {1}", rad, areaCircle);
+            Console.ReadLine();
+        }
+    }
+    class Arithmetics{
+        static add(int[] ints){
+            
+        }
     }
     class Program{
 
         static void Main(string[] args){
 
-            AllTheMethods atm = new AllTheMethods();
+//            AllTheMethods atm = new AllTheMethods();
+//
+//            Console.WriteLine("[in Main()] Size of Int: " + atm.sizeOfInt());
+//            Console.ReadLine();
+//
+//            ObjectFun obj2 = new ObjectFun();
+//            Console.WriteLine("[in Main()] obj2.a = " + obj2.a);
+//            //obj2.ObjectFuncStatic(); will not run because static
+//            obj2.ObjectFunc();
+//            Console.ReadLine();
+//
+//            Console.Write("[in Main()] Size of Char: " + atm.sizeOfChar());
+//            Console.ReadLine();
+//
+//            // Impossible to call a function outside of a Class
+//            //function();
+//
+//            // Difference between a lowercase or uppercase first literal in type specification, when doing variable declaration, is that lowercase are primitive types, while uppercase is object declaration.
+//            String strToSend = "String theory!";
+//            Console.WriteLine("[in Main()] Size of String: \"{0}\" : " + atm.sizeOfString(strToSend), strToSend);
+//            Console.ReadLine();
+//
+//            double doubleToSend = 42.424242;
+//            Console.WriteLine("[in Main()] Now we will convert following double to an int: {0} : " + atm.doubleToInt(doubleToSend)  + "\n", doubleToSend);
+//            Console.WriteLine("[in Main()] Now let's check the lengthof this double, when it becomes a string: " + atm.sizeOfString(doubleToSend.ToString()));
+//            Console.ReadLine();
+//
+//            // User Input
+//            atm.readIntFromUserMultiplyByTwo();
+//            atm.wannaHearPling();
+//            atm.circleArea();
 
-            Console.WriteLine("[in Main()] Size of Int: " + atm.sizeOfInt());
-            Console.ReadLine();
+            Arithmetics ari = new Arithmetics();
 
-            ObjectFun obj2 = new ObjectFun();
-            Console.WriteLine("[in Main()] obj2.a = " + obj2.a);
-            //obj2.ObjectFuncStatic(); will not run because static
-            obj2.ObjectFunc();
-            Console.ReadLine();
-
-            Console.Write("[in Main()] Size of Char: " + atm.sizeOfChar());
-            Console.ReadLine();
-
-            // Impossible to call a function outside of a Class
-            //function();
-
-            // Difference between a lowercase or uppercase first literal in type specification, when doing variable declaration, is that lowercase are primitive types, while uppercase is object declaration.
-            String strToSend = "String theory!";
-            Console.WriteLine("[in Main()] Size of String: \"{0}\" : " + atm.sizeOfString(strToSend), strToSend);
-            Console.ReadLine();
-
-            double doubleToSend = 42.424242;
-            Console.WriteLine("[in Main()] Now we will convert following double to an int: {0} : " + atm.doubleToInt(doubleToSend)  + "\n", doubleToSend);
-            Console.WriteLine("[in Main()] Now let's check the lengthof this double, when it becomes a string: " + atm.sizeOfString(doubleToSend.ToString()));
-            Console.ReadLine();
-
-            // User Input
-            atm.readIntFromUserMultiplyByTwo();
-            atm.wannaHearPling();
 
 
         }
