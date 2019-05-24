@@ -1,4 +1,5 @@
 using System;
+//using RectangleApplication;
 
 namespace SeveralDifferent{
     class ObjectFun{
@@ -143,27 +144,33 @@ namespace SeveralDifferent{
     }
 
     class GuidGenerator{
-        
         public Guid[] GuidBuilder(String[] ean){
             Guid[] g = new Guid[ean.Length];
-            //g = Guid.NewGuid();
-            //Console.WriteLine(g);
-            //Console.WriteLine(Guid.NewGuid());
             for(int i = 0; i < ean.Length; i += 1){
                 g[i] = Guid.NewGuid();
             }
-
-
             return g;
         }
     }
 
+    class NumberManipulator{
+        public int factorial(int num){
+            int result;
+            if(num == 1){
+                return 1;
+            }else{
+                result = factorial(num - 1) * num;
+                return result;
+            }
+        }
+
+    }
 
     class Program{
 
         static void Main(string[] args){
 
-            AllTheMethods atm = new AllTheMethods();
+ //           AllTheMethods atm = new AllTheMethods();
 //
 //            Console.WriteLine("[in Main()] Size of Int: " + atm.sizeOfInt());
 //            Console.ReadLine();
@@ -197,12 +204,19 @@ namespace SeveralDifferent{
 
 //            var ari = new Arithmetics();
 //            ari.controller();
-            var g          = new GuidGenerator();
-            string[] eans  = {"400638133391", "400638133392", "400638133393"};
-            foreach(Guid x in g.GuidBuilder(eans)){
-                Console.WriteLine(x);
-            }
-
+//            var g          = new GuidGenerator();
+//            string[] eans  = {"400638133391", "400638133392", "400638133393"};
+//            foreach(Guid x in g.GuidBuilder(eans)){
+//                Console.WriteLine(x);
+//            }
+//            var r = new RectangleApplication.Rectangle();
+//            r.length = 4.5;
+//            r.width = 3.5;
+//            r.Display();
+//            Console.ReadLine();
+//            
+            var nm = new NumberManipulator();
+            Console.WriteLine((ulong)nm.factorial(22));
 
         }
     }
