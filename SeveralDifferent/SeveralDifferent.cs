@@ -199,8 +199,7 @@ namespace SeveralDifferent{
 //            ari.controller();
             var g          = new GuidGenerator();
             string[] eans  = {"400638133391", "400638133392", "400638133393"};
-            var guidray    = g.GuidBuilder(eans);
-            foreach(Guid x in guidray){
+            foreach(Guid x in g.GuidBuilder(eans)){
                 Console.WriteLine(x);
             }
 
