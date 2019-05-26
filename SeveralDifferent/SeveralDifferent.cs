@@ -1,5 +1,6 @@
 using System;
 //using RectangleApplication;
+using Magic;
 
 namespace SeveralDifferent{
     class ObjectFun{
@@ -164,6 +165,31 @@ namespace SeveralDifferent{
             }
         }
 
+        public void unswappable(int a, int b){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        public void swappable(ref int a, ref int b){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        public void valueLoader(out int x, out int y){
+            int temp = 55;
+            x = temp;
+            y = temp * 101;
+        }
+
+        public (int, int) tupleLoader(out int x, out int y){
+            int temp = 55;
+            x = temp;
+            y = temp * 101;
+            return (x+1,y+1);
+        }
+
     }
 
     class Program{
@@ -215,8 +241,25 @@ namespace SeveralDifferent{
 //            r.Display();
 //            Console.ReadLine();
 //            
-            var nm = new NumberManipulator();
-            Console.WriteLine((ulong)nm.factorial(22));
+//            var nm = new NumberManipulator();
+//            //Console.WriteLine((ulong)nm.factorial(22));
+//            int a = 5;
+//            int b = 7;
+//            Console.WriteLine("Before swap: a = {0}, b = {1}\n", a, b);
+//            nm.unswappable(a, b);
+//            Console.WriteLine("After wrong swap: a = {0}, b = {1}\n", a, b);
+//            nm.swappable(ref a, ref b);
+//            Console.WriteLine("After right swap: a = {0}, b = {1}\n", a, b);
+//            Console.WriteLine("Values before load: a = {0}, b = {1}\n", a, b);
+//            nm.valueLoader(out a, out b);
+//            Console.WriteLine("Values after load: a = {0}, b = {1}\n", a, b);
+//
+//            // Some crazy ass magic
+//            (int, int) k = nm.tupleLoader(out a, out b);
+//            Console.WriteLine("a = {0}, b = {1}, k = {2}", a, b, k);
+            
+            
+            methodReturnTricks.testAllTricks();
 
         }
     }
