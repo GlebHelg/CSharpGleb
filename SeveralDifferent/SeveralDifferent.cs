@@ -1,6 +1,8 @@
 using System;
 //using RectangleApplication;
 using Magic;
+using ArrayHurray;
+
 
 namespace SeveralDifferent{
     class ObjectFun{
@@ -260,10 +262,12 @@ namespace SeveralDifferent{
             
             
 //            methodReturnTricks.testAllTricks(); // do not need to instantiate a class when using static
-            Console.WriteLine("22  : " + Nullables.Test.mightBeNull(22));
-            Console.WriteLine("null: " + Nullables.Test.mightBeNull(null));
-            Console.WriteLine("1   : " + Nullables.Test.changeTo3IfNull(1));
-            Console.WriteLine("null: " + Nullables.Test.changeTo3IfNull(null));
+//            Console.WriteLine("22  : " + Nullables.Test.mightBeNull(22));
+//            Console.WriteLine("null: " + Nullables.Test.mightBeNull(null));
+//            Console.WriteLine("1   : " + Nullables.Test.changeTo3IfNull(1));
+//            Console.WriteLine("null: " + Nullables.Test.changeTo3IfNull(null));
+
+            ArrayClass.ArrayClassExecutor();
         }
     }
 }
