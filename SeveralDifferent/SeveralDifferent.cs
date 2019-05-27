@@ -259,8 +259,11 @@ namespace SeveralDifferent{
 //            Console.WriteLine("a = {0}, b = {1}, k = {2}", a, b, k);
             
             
-            methodReturnTricks.testAllTricks();
-
+//            methodReturnTricks.testAllTricks(); // do not need to instantiate a class when using static
+            Console.WriteLine("22  : " + Nullables.Test.mightBeNull(22));
+            Console.WriteLine("null: " + Nullables.Test.mightBeNull(null));
+            Console.WriteLine("1   : " + Nullables.Test.changeTo3IfNull(1));
+            Console.WriteLine("null: " + Nullables.Test.changeTo3IfNull(null));
         }
     }
 }
