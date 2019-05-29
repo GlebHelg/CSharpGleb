@@ -1,7 +1,20 @@
 using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace ArrayHurray{
+
+    class Paramarray{
+        public int AddElements(params int[] arr){
+            int sum = 0;
+
+            foreach(int i in arr){
+                sum += i;
+            }
+            return sum;
+        }
+    }
     class ArrayClass{
 
         // a multidimensional array is very rigid, but probably very fast
@@ -65,6 +78,57 @@ namespace ArrayHurray{
             return avg;
         }
 
+        public int AddElements(params int[] arr){
+            int sum = 0;
+
+            foreach(int i in arr){
+                sum += i;
+            }
+            return sum;
+        }
+
+        public static void readkeyFib(int lvl, int iter1, int iter2){
+            int temp = iter1;
+            lvl += 1;
+            iter1 = iter2;
+            iter2 += temp;
+            Console.WriteLine("Lvl: {0}, Fib: {1}", lvl, iter2);
+            string s = Console.ReadLine();
+            if(s == ""){
+                // This means continue
+                readkeyFib(lvl, iter1, iter2);
+            }else{
+                Console.WriteLine("Returning from lvl {0} in else. Fib: {1}", lvl, iter2);
+                return;
+            }
+            Console.WriteLine("Returning from lvl {0} in funct. Fib: {1}", lvl, iter2);
+            return;
+        }
+
+        public static void reqStar(string str, int count, int slice){
+            Console.WriteLine(str);
+            string str2 = str + str.Substring(0, slice);
+            if(count == 10){
+                return;
+            }else{
+                reqStar(str2, count+1, slice);
+            }
+            Console.WriteLine(str);
+            return;
+        }
+
+        
+        public static List<string> reqStarPerf(int count, List<string> acc){
+            string str2 = acc[count] + acc[0];
+            if(count == 10){
+                return acc;
+            }else{
+                return reqStarPerf(count+1, acc.Concat(new[] {str2}).ToList())
+                    .Concat(new[] {acc[count]})
+                    .ToList();
+            }
+        }
+
         public static void ArrayClassExecutor(){
             int[] a = {1,2,3};
             int[] b = {4,5,6};
@@ -84,8 +148,18 @@ namespace ArrayHurray{
             //double avg = getAverage(passit);
             //Console.WriteLine(avg);
 
+            //var app = new Paramarray();
+            //int sum = app.AddElements(512, 720, 250, 567, 889);
+            //Console.WriteLine("The sum is: {0}", sum);
+            //Console.ReadKey();
+            //readkeyFib(0, 0, 1);
+            string str = "ZXY";
+            reqStar(str, 0, str.Length);
 
-
+            IEnumerable<string> retStr = reqStarPerf(0, new List<string>{str});
+            foreach (string v in retStr) {
+                Console.WriteLine(v);
+            }
         }
     }
 }
